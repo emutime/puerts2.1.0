@@ -171,8 +171,8 @@ jobs:
           backend: mult
 
   linux64:
-    runs-on: ubuntu-latest
-    container: ubuntu:18.04
+    runs-on: ubuntu-20.04
+    
     steps:
       - uses: actions/checkout@v3
       - name: BuildLinux
