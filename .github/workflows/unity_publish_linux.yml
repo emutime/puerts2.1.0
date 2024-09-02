@@ -1,4 +1,4 @@
-name: unity publish
+name: unity publish linux
 
 on: 
   workflow_dispatch:
