@@ -198,7 +198,9 @@ if ( USING_MULT_BACKEND )
     # -------------------end qjs backend-------------------------
 endif ()
 
-list(APPEND PUERTS_COMPILE_DEFINITIONS THREAD_SAFE)
+if( NOT ("${JS_ENGINE}" MATCHES "^quickjs") )
+    list(APPEND PUERTS_COMPILE_DEFINITIONS THREAD_SAFE)
+endif()
 
 if ( WIN32 AND NOT CYGWIN )
     list(APPEND PUERTS_COMPILE_DEFINITIONS BUILDING_V8_SHARED)
