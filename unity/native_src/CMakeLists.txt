@@ -198,7 +198,7 @@ if ( USING_MULT_BACKEND )
     # -------------------end qjs backend-------------------------
 endif ()
 
-if( NOT ("${JS_ENGINE}" MATCHES "^quickjs") )
+if( ("${JS_ENGINE}" MATCHES "^v8"))
     list(APPEND PUERTS_COMPILE_DEFINITIONS THREAD_SAFE)
 endif()
 
