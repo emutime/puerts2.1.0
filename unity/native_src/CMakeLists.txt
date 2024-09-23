@@ -200,6 +200,7 @@ endif ()
 
 if( ("${JS_ENGINE}" MATCHES "^v8"))
     list(APPEND PUERTS_COMPILE_DEFINITIONS THREAD_SAFE)
+    target_compile_definitions(puerts PRIVATE WITH_INSPECTOR)
 endif()
 
 if ( WIN32 AND NOT CYGWIN )
