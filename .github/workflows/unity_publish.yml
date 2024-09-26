@@ -230,7 +230,7 @@ jobs:
         uses: ./.github/workflows/composites/unity-build-plugins/windows/
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          backend: v8_9.4
+          backend: v8
       - name: reset
         shell: bash
         run: |
