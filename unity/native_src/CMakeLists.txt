@@ -212,6 +212,7 @@ if ( NOT CMAKE_BUILD_TYPE MATCHES "Release" )
 endif ()
 
 if ( MSYS OR WIN32 )
+    target_compile_definitions(v8backend PRIVATE WITHOUT_INSPECTOR)
     if ( WIN32 ) 
         target_link_libraries(puerts
             winmm.lib
